@@ -354,8 +354,8 @@ def generate_jwt_with_info(uid: str, password: str):
     return {
         "access_token": token_val,
         "account_id": str(real_uid) if real_uid else str(uid),
-        "exp": profile.get("exp") or N/A,
-        "level": profile.get("level") or N/A,
+        "exp": profile.get("exp") or "N/A",
+        "level": profile.get("level") or "N/A",
         "nickname": profile.get("nickname") or "N/A",
         "region": profile.get("region") or region or "N/A",
         "status": "success",
